@@ -1,12 +1,15 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app=Flask( __name__ )
 
-@app.route('/')
+@app.route('/welcome')
 def hello():
     return 'welcome to my website'
 
 
+@app.route('/')
+def first():
+    return render_template('index.html' )
 
 
 
